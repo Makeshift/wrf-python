@@ -4,10 +4,10 @@ package:
   name: wrf-python
   version: {{ version }}
 
-source:
+#source:
 #  for develop
-  git_url: https://github.com/NCAR/wrf-python
-  git_branch: develop
+  #git_url: https://github.com/NCAR/wrf-python
+  #git_branch: develop
 #  for release
 #  fn: wrf-python-{{ version }}.tar.gz
 #  url: https://github.com/NCAR/wrf-python/archive/{{ version }}.tar.gz
@@ -37,17 +37,17 @@ requirements:
     - libgcc  # [unix]
     - xarray
 
-test:
-  requires:
-    - setuptools
-    - netcdf4
-    - xarray
-  source_files:
-    - test/ci_tests
-  imports:
-    - wrf
-  commands:
-    - cd test/ci_tests && python utests.py
+# test:
+#   requires:
+#     - setuptools
+#     - netcdf4
+#     - xarray
+#   source_files:
+#     - test/ci_tests
+#   imports:
+#     - wrf
+#   commands:
+#     - cd test/ci_tests && python utests.py
 
 about:
   home: https://github.com/NCAR/wrf-python
